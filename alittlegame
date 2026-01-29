@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>INVERSEGAME</title>
+    <link rel="stylesheet" href="gamestyle.css">
+</head>
+
+<body>
+
+<h1>POUR UNE FOIS, VOUS ÊTES LE MÉCHANT</h1>
+
+<p class="center-text">
+    Les héros ont échoué.<br>
+    Cette fois, le destin du multiversE est entre VOS mains.
+    <br><br>
+    Votre mission : parcourir les différents multiverses, choisir le bon chemin,
+    rassembler les Pierres d’Infinité
+    et retrouver le Gant de Thanos.
+    <br><br>
+    Une fois les pierres réunies, plus rien ne pourra vous arrêter…
+    L’humanité devra disparaître.
+</p>
+
+<section id="lien">
+    <a href="qgmarvel.html" target="_blank" class="center-text">
+        ENTREZ DANS LE QG
+    </a>
+</section>
+
+</body>
+</html>
