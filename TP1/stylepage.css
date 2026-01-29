@@ -1,0 +1,86 @@
+/* Style général */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 20px;
+}
+
+/* Titres */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+h2 {
+    color: #1e90ff;
+    border-bottom: 2px solid #1e90ff;
+    padding-bottom: 5px;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Liens */
+a {
+    color: #e67e22;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 60%;
+}
+
+th {
+    background-color: #1e90ff;
+    color: white;
+}
+
+td, th {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Navigation */
+nav {
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 5px;
+}
+
+/* Image */
+img {
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+/* Poésie */
+pre {
+    background-color: #eee;
+    padding: 15px;
+    border-left: 5px solid #1e90ff;
+    overflow-x: auto;
+}
