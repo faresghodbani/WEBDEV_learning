@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>VICTOIRE - Le Gant de l'Infini</title>
+    <link rel="stylesheet" href="qgstyle.css">
+    <style>
+        .gant-finale {
+            max-width: 400px;
+            border-radius: 20px;
+            margin: 20px auto;
+            display: block;
+            animation: pulse 2s ease-in-out infinite;
+            box-shadow: 0 0 30px gold, 0 0 60px orange;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        h2 {
+            color: gold;
+            text-shadow: 0 0 10px orange;
+            font-size: 2em;
+        }
+
+        .btn-rejouer {
+            display: inline-block;
+            padding: 18px 50px;
+            margin-top: 30px;
+            background: linear-gradient(135deg, #ff0044, #cc0066, #9900ff);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 50px;
+            box-shadow:
+                0 8px 25px rgba(255, 0, 100, 0.4),
+                0 0 40px rgba(153, 0, 255, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-rejouer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-rejouer:hover::before {
+            left: 100%;
+        }
+
+        .btn-rejouer:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow:
+                0 15px 40px rgba(255, 0, 100, 0.5),
+                0 0 60px rgba(153, 0, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🔥 TU AS RÉUNI LES 6 PIERRES 🔥</h1>
+
+    <img src="gant.jpeg" alt="Le Gant de l'Infini" class="gant-finale">
+
+    <h2>LE GANT DE L'INFINI EST À TOI</h2>
+    <h1>💥 L'HUMANITÉ DISPARAÎT 💥</h1>
+
+    <a href="qgmarvel.html" class="btn-rejouer">Rejouer</a>
+
+</body>
+
+</html>
