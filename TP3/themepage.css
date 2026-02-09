@@ -1,0 +1,36 @@
+* {
+    font-family: Verdana;
+}
+
+table, td, th {
+    border: 1px solid gray;
+}
+
+a{
+    color: lightgreen;
+}
+
+a:hover {
+    color: orange;
+}
+
+a:visited {
+    color: darkgreen;
+}
+
+#haut {
+    background-image: url('texture.svg');
+    background-repeat: repeat;
+    padding: 20px;
+}
+
+h1 {
+    border-bottom: 3px solid #333;
+    padding-bottom: 10px;
+}
+
+h2 {
+    border-bottom: 3px solid #333;
+    padding-bottom: 10px;
+}
+

@@ -1,0 +1,90 @@
+/* Question a: Aspect général, cellules vides et cellules titres */
+
+* {
+    font-family: Verdana, Arial, sans-serif;
+}
+
+table {
+    /* Espacement des bords des cellules du tableau */
+    border-collapse: separate;
+    border-spacing: 0.4em;
+}
+
+caption {
+    /* Titre en bas et en gras */
+    caption-side: bottom;
+    font-weight: bold;
+}
+
+th, td {
+    /* Trait bleu fin, alignement milieu, hauteur 2.4em */
+    border: 1px solid #3b618e;
+    vertical-align: middle;
+    height: 2.4em;
+    padding: 0.2em 0.5em;
+}
+
+tbody th {
+    /* Cellules titres du tbody avec alignement haut */
+    vertical-align: top;
+}
+
+td {
+    /* Texte centré, largeur minimale 10em */
+    text-align: center;
+    min-width: 10em;
+}
+
+/* Cellules vides encadrées de tirets noirs (droite, bas, gauche) */
+tbody td:empty, tbody th:empty {
+    border-top: none;
+    border-right: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+    border-left: 1px dashed #000;
+}
+
+/* Exception: première ligne du tbody avec trait en haut mais pas à gauche */
+tbody tr:first-child td:empty {
+    border-top: 1px dashed #000;
+    border-left: none;
+}
+
+/* Exception: première cellule vide avec trait à gauche */
+tbody tr:first-child td:empty:first-child {
+    border-left: 1px dashed #000;
+}
+
+/* Question b: Les cellules de données */
+
+th:not(:empty), td:not(:empty) {
+    /* Bords arrondis, couleur blanche, encadrement outset, ombre noire */
+    border-radius: 0.5em;
+    color: #fff;
+    border: 2px outset rgb(59, 97, 142);
+    box-shadow: 1px 1px 0 #000;
+}
+
+/* 4 couleurs différentes pour les cellules */
+thead th, tbody th {
+    background: #2f4f75;
+}
+
+/* Couleur pour cellule doctorat */
+.doctorat {
+    background: #6c5aa7;
+}
+
+/* Couleur pour cellules master */
+.master {
+    background: #8cab4f;
+}
+
+/* Couleur pour cellules licences */
+.licence {
+    background: #3f6fa8;
+}
+
+/* Licence MIASHS transparente à 50% */
+.licence.miahshs {
+    background: rgba(63, 111, 168, 0.5);
+}
