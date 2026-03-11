@@ -1,0 +1,1278 @@
+/* BODY - Styles généraux */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #eaeaea;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* TITRE PRINCIPAL */
+h1 {
+    font-size: 3.2em;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        0 0 40px #cc0000,
+        2px 2px 8px #000;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+/* EASTER EGG — invisible clickable */
+#easter-egg-gant {
+    color: inherit !important;
+    font: inherit !important;
+    cursor: default !important;
+    user-select: text;
+    -webkit-user-select: text;
+    text-decoration: none !important;
+    pointer-events: auto;
+}
+
+#easter-egg-gant:hover,
+#easter-egg-gant:active,
+#easter-egg-gant:focus {
+    color: inherit !important;
+    cursor: default !important;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+/* TEXTE CENTRAL */
+p.center-text {
+    max-width: 750px;
+    font-size: 1.35em;
+    line-height: 1.8;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    color: #ffffff;
+    padding: 35px 45px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 100, 100, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* GRID MULTIVERSES - 4 colonnes */
+.multiverse-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 150px;
+    gap: 15px;
+    width: 90%;
+    max-width: 800px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* CONTENEUR GANT - centré en bas */
+.gant-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.gant-container a {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CASES TRANSPARENTES */
+.multiverse-grid a.case {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s, background 0.2s;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.multiverse-grid a.case span {
+    pointer-events: none;
+}
+
+.multiverse-grid a.case:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* CASE DÉCOUVERTE */
+.multiverse-grid a.revealed {
+    background: none;
+    border: none;
+}
+
+.multiverse-grid a.revealed img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.case.revealed {
+    background: none !important;
+    border: none !important;
+}
+
+/* CASE VERROUILLÉE (gant caché) */
+.multiverse-grid a.hidden {
+    background: rgba(50, 50, 50, 0.5);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Cadenas — style opaque */
+#gant-lock {
+    background: rgba(30, 30, 30, 0.95) !important;
+    border: 2px solid rgba(255, 200, 0, 0.5) !important;
+    cursor: pointer !important;
+    pointer-events: all !important;
+    backdrop-filter: none !important;
+}
+
+.multiverse-grid a.hidden span {
+    font-size: 2em;
+    opacity: 0.5;
+}
+
+/* CASE VIDE */
+.multiverse-grid a.empty {
+    background: transparent;
+    border: none;
+    pointer-events: none;
+}
+
+/* Styles des cases de jeu */
+.case {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+/* SECTION BOUTON */
+#lien {
+    margin-top: 20px;
+}
+
+#lien a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 18px 50px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff0000, #cc0000, #990000);
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow:
+        0 8px 25px rgba(255, 0, 0, 0.4),
+        0 0 40px rgba(200, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+#lien a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+#lien a:hover::before {
+    left: 100%;
+}
+
+#lien a:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow:
+        0 15px 40px rgba(255, 0, 0, 0.5),
+        0 0 60px rgba(200, 0, 0, 0.5);
+}
+
+#lien a:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* GANT RÉVÉLÉ */
+.multiverse-grid a.gant-case {
+    border: 3px solid gold;
+    border-radius: 10px;
+    box-shadow: 0 0 20px gold, 0 0 40px orange, 0 0 60px yellow;
+}
+
+/* Gestion des pages */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: flex;
+}
+
+#home-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(40, 0, 0, 0.9), rgba(80, 0, 0, 0.85)),
+        url("https://cdn.wallpapersafari.com/86/95/w0bj2q.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#game-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    background: url("https://fans.disneylandparis.com//app/uploads/2023/10/AC-Lights-4-scaled.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: background-image 0.6s ease;
+}
+
+#game-page.bunker-mode {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(10, 20, 40, 0.5)),
+        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&h=900&fit=crop') no-repeat center center,
+        radial-gradient(circle at center, rgba(0, 150, 200, 0.2), transparent);
+    background-size: cover, cover;
+    background-attachment: fixed;
+}
+
+#victory-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: url("https://fans.disneylandparis.com//app/uploads/2023/10/AC-Lights-4-scaled.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#loss-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+/* Gant finale */
+.gant-finale {
+    max-width: 400px;
+    border-radius: 20px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 0 30px gold, 0 0 60px orange;
+    cursor: pointer;
+}
+
+#victory-page h2 {
+    color: gold;
+    text-shadow: 0 0 10px orange;
+    font-size: 2em;
+}
+
+.btn-rejouer {
+    display: inline-block;
+    padding: 18px 50px;
+    margin-top: 30px;
+    background: linear-gradient(135deg, #ff0044, #cc0066, #9900ff);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(255, 0, 100, 0.4), 0 0 40px rgba(153, 0, 255, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-rejouer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-rejouer:hover::before {
+    left: 100%;
+}
+
+.btn-rejouer:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 0, 100, 0.5), 0 0 60px rgba(153, 0, 255, 0.5);
+}
+
+.btn-rejouer:active {
+    transform: scale(0.95);
+}
+
+.loss-title {
+    font-size: 3em;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.btn-restart {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-restart:hover {
+    color: black;
+    transform: scale(1.05);
+}
+
+.btn-restart.avengers {
+    background: red;
+}
+
+.btn-restart.avengers:hover {
+    background: white;
+}
+
+.btn-restart.gardiens {
+    background: purple;
+}
+
+.btn-restart.gardiens:hover {
+    background: white;
+}
+
+/* Styles du bouton de démarrage */
+.btn-start {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 18px 50px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff0000, #cc0000, #990000);
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4), 0 0 40px rgba(200, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn-start::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-start:hover::before {
+    left: 100%;
+}
+
+.btn-start:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 0, 0, 0.5), 0 0 60px rgba(200, 0, 0, 0.5);
+}
+
+.btn-start:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Page victoire styles */
+#message {
+    color: gold;
+    text-shadow: 0 0 10px orange;
+}
+
+#finale {
+    color: #fff;
+}
+
+#gantImg {
+    cursor: pointer;
+}
+
+/* Styles des cases de jeu */
+.game-case {
+    cursor: pointer !important;
+    pointer-events: all !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.game-case:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* BOUTON LOGO MARVEL - DISCRET */
+.marvel-logo-container {
+    position: fixed;
+    bottom: 30px;
+    right: 375px;
+    z-index: 100;
+    height: 140px;
+    width: 140px;
+}
+
+.marvel-logo-btn {
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.stones-preview {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(255, 255, 0, 0.2), rgba(0, 255, 0, 0.2), rgba(0, 0, 255, 0.2), rgba(255, 0, 255, 0.2), rgba(255, 150, 0, 0.2));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    opacity: 0.4;
+    transition: opacity 0.4s ease;
+}
+
+.marvel-logo-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.marvel-logo-btn:hover .stones-preview {
+    opacity: 0.7;
+}
+
+.marvel-logo-btn:active {
+    transform: scale(0.95);
+}
+
+/* PAGE BUNKER */
+#bunker-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%),
+        url('Bunker-connecte-les-dernieres-innovations-domotiques-a-adopter-1024x585.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#bunker-page h1 {
+    color: #ffff00;
+    text-shadow: 0 0 15px #ffff00, 0 0 30px #ff00ff, 0 0 50px #0099ff, 2px 2px 8px #000;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.bunker-subtitle {
+    color: #00ffff;
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #0099ff;
+    letter-spacing: 2px;
+}
+
+/* CONTENEUR DES PIERRES — sol du bunker */
+.stones-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 50px;
+    width: 90%;
+    max-width: 900px;
+    margin-bottom: 40px;
+    perspective: 600px;
+}
+
+/* PIERRE INDIVIDUELLE — style loot au sol */
+.stone {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: loot-float 2.5s ease-in-out infinite;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Ombre au sol sous la pierre */
+.stone::after {
+    content: '';
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 12px;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.5), transparent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.stone-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.stone-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.stone-visual {
+    font-size: 3.5em;
+    line-height: 1;
+    text-shadow: 0 0 15px currentColor, 0 0 30px currentColor;
+    filter: drop-shadow(0 0 8px currentColor);
+}
+
+.stone-label {
+    font-size: 0.65em;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 5px;
+    text-shadow: 0 0 5px #000;
+    letter-spacing: 0.5px;
+}
+
+/* Animation flottement loot */
+@keyframes loot-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.stone:hover {
+    transform: scale(1.25) translateY(-8px);
+    animation: none;
+    filter: brightness(1.3);
+}
+
+.stone:active {
+    transform: scale(0.9);
+}
+
+/* Couleurs des pierres */
+.stone.stone-1 {
+    background: radial-gradient(circle at 30% 30%, #ff6666, #dd0000);
+    border-color: #ff0000;
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #dd0000;
+}
+
+.stone.stone-2 {
+    background: radial-gradient(circle at 30% 30%, #6666ff, #0000dd);
+    border-color: #0099ff;
+    box-shadow: 0 0 20px #0099ff, 0 0 40px #0066ff;
+}
+
+.stone.stone-3 {
+    background: radial-gradient(circle at 30% 30%, #ffff66, #ffff00);
+    border-color: #ffff00;
+    box-shadow: 0 0 20px #ffff00, 0 0 40px #ffcc00;
+    color: #333;
+}
+
+.stone.stone-4 {
+    background: radial-gradient(circle at 30% 30%, #ff66ff, #dd00dd);
+    border-color: #ff00ff;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #cc00cc;
+}
+
+.stone.stone-5 {
+    background: radial-gradient(circle at 30% 30%, #66ff66, #00dd00);
+    border-color: #00ff00;
+    box-shadow: 0 0 20px #00ff00, 0 0 40px #00cc00;
+    color: #333;
+}
+
+.stone.stone-6 {
+    background: radial-gradient(circle at 30% 30%, #ff9966, #ff6600);
+    border-color: #ffaa00;
+    box-shadow: 0 0 20px #ffaa00, 0 0 40px #ff8800;
+}
+
+.stone.collected {
+    opacity: 0.3;
+    cursor: not-allowed;
+    animation: none;
+    transform: scale(0.6);
+    filter: grayscale(1);
+    box-shadow: none;
+}
+
+/* COMPTEUR PIERRES */
+.stones-collected {
+    font-size: 1.5em;
+    color: #00ffff;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #00ffff;
+    letter-spacing: 2px;
+}
+
+/* BOUTON ANÉANTIR LE MONDE */
+.btn-annihilate {
+    padding: 20px 60px;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff0000, #000000, #ff0000);
+    border: 3px solid #ff0000;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #ff0000, 0 0 60px #cc0000, inset 0 0 20px rgba(255, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.btn-annihilate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-annihilate:hover:not(:disabled) {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 0 50px #ff0000, 0 0 100px #cc0000, inset 0 0 30px rgba(255, 0, 0, 0.8);
+    animation: pulse 0.5s ease-in-out;
+}
+
+.btn-annihilate:hover:not(:disabled)::before {
+    left: 100%;
+}
+
+.btn-annihilate:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: linear-gradient(135deg, #666666, #333333, #666666);
+    border-color: #666666;
+    box-shadow: 0 0 10px #666666;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 50px #ff0000, 0 0 100px #cc0000, inset 0 0 30px rgba(255, 0, 0, 0.8);
+    }
+
+    50% {
+        box-shadow: 0 0 70px #ff0000, 0 0 150px #ff0000, inset 0 0 40px rgba(255, 0, 0, 1);
+    }
+}
+
+/* BOUTON RETOUR */
+.btn-back-bunker {
+    padding: 15px 40px;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0099ff, #0066cc);
+    border: 2px solid #0099ff;
+    border-radius: 50px;
+    box-shadow: 0 0 20px #0099ff, 0 0 40px #0066cc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-back-bunker:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 30px #0099ff, 0 0 60px #0099ff;
+}
+
+.btn-back-bunker:active {
+    transform: translateY(0) scale(0.95);
+}
+
+/* PAGE THANOS */
+#thanos-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(80, 0, 20, 0.9)),
+        url('https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?w=1600&h=900&fit=crop') no-repeat center center;
+    background-size: cover, cover;
+    background-attachment: fixed;
+}
+
+#thanos-page h1 {
+    color: #ff6600;
+    text-shadow: 0 0 20px #ff6600, 0 0 40px #ff3300, 0 0 60px #cc0000;
+}
+
+.thanos-image {
+    max-width: 500px;
+    max-height: 500px;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 0 50px #ff6600, 0 0 100px #ff3300, 0 0 150px #cc0000;
+    border-radius: 20px;
+    animation: thanos-glow 2s ease-in-out infinite;
+}
+
+@keyframes thanos-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 50px #ff6600, 0 0 100px #ff3300, 0 0 150px #cc0000;
+    }
+
+    50% {
+        box-shadow: 0 0 70px #ff6600, 0 0 150px #ff3300, 0 0 200px #ff0000;
+    }
+}
+
+#thanos-message {
+    color: #ffaa00;
+    text-shadow: 0 0 10px #ffaa00;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.btn-back-home {
+    padding: 15px 50px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff6600, #ff3300, #cc0000);
+    border: 2px solid #ff6600;
+    border-radius: 50px;
+    box-shadow: 0 0 30px #ff6600, 0 0 60px #ff3300;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-back-home:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 50px #ff6600, 0 0 100px #ff3300;
+}
+
+.btn-back-home:active {
+    transform: translateY(0) scale(0.95);
+}
+
+/* ===================== HUD (barre de vie + compteur pierres) ===================== */
+.game-hud {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 10px;
+    padding: 14px 28px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.hud-health {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.hud-label {
+    font-size: 0.85em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+}
+
+/* Barre de vie */
+.health-bar-container {
+    flex: 1;
+    height: 22px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.health-bar-fill {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #00ff00, #44ff44);
+    border-radius: 12px;
+    transition: width 0.5s ease, background 0.5s ease;
+    box-shadow: 0 0 12px rgba(0, 255, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.hud-health-text {
+    font-size: 1.1em;
+    font-weight: 900;
+    color: #ffffff;
+    min-width: 32px;
+    text-align: right;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Compteur de pierres */
+.hud-stones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hud-stones-count {
+    font-size: 1.4em;
+    font-weight: 900;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff8800;
+    letter-spacing: 1px;
+}
+
+/* Animation de dégât (tremblement) */
+.game-hud.hud-damage {
+    animation: hud-shake 0.5s ease-in-out;
+    border-color: rgba(255, 0, 0, 0.6);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5),
+        inset 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+@keyframes hud-shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10% {
+        transform: translateX(-8px);
+    }
+
+    20% {
+        transform: translateX(8px);
+    }
+
+    30% {
+        transform: translateX(-6px);
+    }
+
+    40% {
+        transform: translateX(6px);
+    }
+
+    50% {
+        transform: translateX(-4px);
+    }
+
+    60% {
+        transform: translateX(4px);
+    }
+
+    70% {
+        transform: translateX(-2px);
+    }
+
+    80% {
+        transform: translateX(2px);
+    }
+}
+
+/* Case ennemi révélée — fond rouge pour signaler le danger */
+.case.revealed-enemy {
+    background: rgba(255, 0, 0, 0.25) !important;
+    border-color: rgba(255, 0, 0, 0.6) !important;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+/* ===================== OVERLAY CODE SECRET ===================== */
+.secret-code-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+}
+
+.secret-code-overlay.active {
+    display: flex;
+}
+
+.secret-code-modal {
+    background: linear-gradient(145deg, rgba(20, 10, 40, 0.95), rgba(40, 15, 60, 0.95));
+    border: 2px solid rgba(255, 200, 0, 0.35);
+    border-radius: 24px;
+    padding: 40px 50px;
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(255, 200, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: modal-appear 0.3s ease-out;
+}
+
+@keyframes modal-appear {
+    from {
+        transform: scale(0.85) translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.secret-code-title {
+    font-size: 2em;
+    color: #ffcc00;
+    text-shadow: 0 0 15px #ffcc00, 0 0 30px #ff8800;
+    margin-bottom: 8px;
+}
+
+.secret-code-desc {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.secret-code-attempts {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #00ccff;
+    text-shadow: 0 0 8px #00ccff;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.secret-code-input-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.secret-code-input {
+    width: 100px;
+    padding: 12px 16px;
+    font-size: 1.6em;
+    font-weight: 900;
+    text-align: center;
+    border: 2px solid rgba(255, 200, 0, 0.4);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.secret-code-input::-webkit-outer-spin-button,
+.secret-code-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.secret-code-input:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 15px rgba(255, 200, 0, 0.3);
+}
+
+.secret-code-btn {
+    padding: 12px 28px;
+    font-size: 1.1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    background: linear-gradient(135deg, #ffcc00, #ff8800);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 200, 0, 0.3);
+}
+
+.secret-code-btn:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 200, 0, 0.5);
+}
+
+.secret-code-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* INDICES */
+.secret-code-hint {
+    font-size: 1.2em;
+    font-weight: 700;
+    min-height: 30px;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.hint-higher {
+    color: #00ccff;
+    text-shadow: 0 0 8px #00ccff;
+}
+
+.hint-lower {
+    color: #ff66aa;
+    text-shadow: 0 0 8px #ff66aa;
+}
+
+.hint-success {
+    color: #00ff66;
+    text-shadow: 0 0 12px #00ff66;
+}
+
+.hint-fail {
+    color: #ff4444;
+    text-shadow: 0 0 12px #ff4444;
+}
+
+.hint-warning {
+    color: #ffaa00;
+    text-shadow: 0 0 8px #ffaa00;
+}
+
+.secret-code-close-btn {
+    padding: 10px 24px;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.secret-code-close-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===================== PAGE AVENGERS (fin alternative) ===================== */
+#avengers-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(0, 20, 60, 0.95), rgba(10, 40, 100, 0.9)),
+        url('https://images.unsplash.com/photo-1534996858221-380b92700493?w=1600&h=900&fit=crop') no-repeat center center;
+    background-size: cover, cover;
+    background-attachment: fixed;
+}
+
+.avengers-title {
+    color: #3399ff !important;
+    text-shadow: 0 0 15px #3399ff, 0 0 30px #0066cc, 0 0 60px #0044aa !important;
+}
+
+.avengers-image {
+    max-width: 900px;
+    width: 95%;
+    margin: 30px auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(50, 150, 255, 0.5), 0 0 80px rgba(50, 100, 255, 0.3);
+    animation: avengers-glow 2s ease-in-out infinite;
+}
+
+@keyframes avengers-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 40px rgba(50, 150, 255, 0.5), 0 0 80px rgba(50, 100, 255, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 60px rgba(50, 150, 255, 0.7), 0 0 120px rgba(50, 100, 255, 0.5);
+    }
+}
+
+.avengers-message {
+    color: #66ccff;
+    text-shadow: 0 0 10px #3399ff;
+    font-size: 1.6em;
+    max-width: 700px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* ===================== PERSONNAGE FANTÔME ===================== */
+.ghost-character {
+    position: fixed;
+    bottom: -250px;
+    right: -250px;
+    width: 200px;
+    height: auto;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 50;
+    animation: ghost-drift 14s linear infinite;
+    filter: grayscale(0.3);
+}
+
+@keyframes ghost-drift {
+    0% {
+        bottom: -250px;
+        right: -250px;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.15;
+    }
+
+    40% {
+        opacity: 0.15;
+    }
+
+    50% {
+        bottom: 50%;
+        right: 50%;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 50%;
+        right: 50%;
+        opacity: 0;
+    }
+}

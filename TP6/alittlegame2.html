@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVERSEGAME - Le Gant de l'Infini</title>
+    <link rel="stylesheet" href="gamestyle2.css">
+</head>
+
+<body>
+
+    <!-- PAGE D'ACCUEIL -->
+    <div id="home-page" class="page active">
+        <h1>POUR UNE FOIS, VOUS ÊTES LE MÉCHANT</h1>
+
+        <p class="center-text">
+            Les héros ont échoué.<br>
+            Cette fois, le destin du monde est entre VOS mains.
+            <br><br>
+            Votre mission : parcourir les différents multiverses, choisir le bon chemin,
+            rassembler les Pierres d'Infinité
+            et retrouver <span id="easter-egg-gant">le Gant de Thanos</span>.
+            <br><br>
+            Une fois les pierres réunies, plus rien ne pourra vous arrêter…
+            L'humanité devra disparaître.
+        </p>
+
+        <section id="lien">
+            <button id="start-game-btn" class="btn-start">ENTREZ DANS LE QG</button>
+        </section>
+    </div>
+
+    <!-- PAGE JEU PRINCIPAL -->
+    <div id="game-page" class="page">
+        <h1 id="game-title">QG MARVEL - Trouve les 6 pierres de l'infini</h1>
+
+        <div class="game-hud" id="game-hud">
+            <div class="hud-health">
+                <span class="hud-label">❤️ VIE</span>
+                <div class="health-bar-container">
+                    <div class="health-bar-fill" id="health-bar-fill"></div>
+                </div>
+                <span class="hud-health-text" id="health-text">100</span>
+            </div>
+            <div class="hud-stones">
+                <span class="hud-label">💎 PIERRES</span>
+                <span class="hud-stones-count" id="hud-stones-count">0/6</span>
+            </div>
+        </div>
+
+        <div class="multiverse-grid" id="game-grid">
+            <!-- Les cases seront générées par JavaScript -->
+        </div>
+
+        <div class="gant-container">
+            <div class="case hidden" id="gant-lock"><span>🔒</span></div>
+        </div>
+
+        <!-- OVERLAY CODE SECRET -->
+        <div class="secret-code-overlay" id="secret-code-overlay">
+            <div class="secret-code-modal">
+                <h2 class="secret-code-title">🔐 CODE SECRET</h2>
+                <p class="secret-code-desc">Entrez le code à 2 chiffres pour déverrouiller le cadenas</p>
+                <div class="secret-code-attempts" id="secret-code-attempts">Tentatives : 0/5</div>
+                <div class="secret-code-input-row">
+                    <input type="number" id="secret-code-input" class="secret-code-input" min="10" max="99"
+                        placeholder="??">
+                    <button id="secret-code-submit" class="secret-code-btn">VALIDER</button>
+                </div>
+                <p class="secret-code-hint" id="secret-code-hint"></p>
+                <button id="secret-code-close" class="secret-code-close-btn">✕ Fermer</button>
+            </div>
+        </div>
+
+        <div class="marvel-logo-container">
+            <button id="marvel-logo-btn" class="marvel-logo-btn" title="Accéder au Bunker secrètement">
+                <div class="stones-preview"></div>
+            </button>
+        </div>
+    </div>
+
+    <!-- PAGE VICTOIRE -->
+    <div id="victory-page" class="page">
+        <h1>🔥 TU AS RÉUNI LES 6 PIERRES 🔥</h1>
+
+        <img src="gant.jpeg" alt="Le Gant de l'Infini" class="gant-finale" id="gantImg">
+
+        <h2 id="message">LE GANT DE L'INFINI EST À TOI</h2>
+        <h1 id="finale">💥 L'HUMANITÉ DISPARAÎT 💥</h1>
+
+        <button class="btn-rejouer" id="replay-btn">Rejouer</button>
+    </div>
+
+    <!-- PAGE DÉFAITE -->
+    <div id="loss-page" class="page">
+        <h1 class="loss-title" id="loss-title">PERDU</h1>
+        <button class="btn-restart" id="restart-btn">RECOMMENCER</button>
+    </div>
+
+    <!-- PAGE BUNKER -->
+    <div id="bunker-page" class="page">
+        <h1>⚫ LE BUNKER SECRET ⚫</h1>
+        <p class="bunker-subtitle">Récoltez les Pierres d'Infinité et anéantissez le monde</p>
+
+        <div class="stones-container" id="stones-container">
+            <!-- Les pierres seront générées par JavaScript -->
+        </div>
+
+        <p class="stones-collected">Pierres collectées: <span id="bunker-stones-count">0</span>/6</p>
+
+        <button id="annihilate-btn" class="btn-annihilate" disabled>⚡ ANÉANTIR LE MONDE ⚡</button>
+        <button id="back-to-game-btn" class="btn-back-bunker">Retour au QG</button>
+    </div>
+
+    <!-- PAGE THANOS VICTOIRE -->
+    <div id="thanos-page" class="page">
+        <h1>🌍 LE MONDE EST ANÉANTI 🌍</h1>
+
+        <img src="gant.jpeg" alt="Thanos avec le Gant" class="thanos-image" id="thanosImg">
+
+        <button class="btn-back-home" id="back-to-home-btn">Retour au Menu</button>
+    </div>
+
+    <!-- PAGE FIN ALTERNATIVE - AVENGERS -->
+    <div id="avengers-page" class="page">
+        <h1 class="avengers-title">🛡️ BIENVENUE CHEZ LES AVENGERS 🛡️</h1>
+
+        <img src="DLP_MARVEL-ENTRY_FINAL-2-scaled-1-1270x580.jpg" alt="Entrée Marvel" class="avengers-image">
+
+        <h2 class="avengers-message">Vous pouvez désormais rejoindre les Avengers afin de sauver le monde plutôt que de
+            le détruire !</h2>
+
+        <button class="btn-back-home" id="avengers-back-btn">Retour au Menu</button>
+    </div>
+
+    <script src="gamejs.js"></script>
+
+</body>
+
+</html>
