@@ -1,0 +1,145 @@
+🎮 WhoRelate
+👥 Membres du groupe
+Chadi Khazal
+
+Fares Ghodbani
+
+📌 Description du projet
+WhoRelate est un jeu multijoueur en ligne dans lequel les joueurs racontent des histoires et tentent de tromper les autres participants.
+
+Le principe est simple :
+
+Chaque joueur écrit une histoire en indiquant si elle est vraie ou un bluff
+
+Les autres joueurs doivent :
+
+deviner qui est l’auteur
+
+déterminer si l’histoire est vraie ou fausse
+
+Le jeu repose sur un mélange de créativité, stratégie et psychologie.
+
+⚙️ Technologies utilisées
+PHP : logique serveur et gestion du jeu
+
+JavaScript : mise à jour en temps réel (AJAX / fetch)
+
+HTML / CSS : interface utilisateur
+
+JSON (data.json) : stockage des données (rooms, joueurs, scores)
+
+🧠 Fonctionnalités principales
+🔐 Authentification
+Connexion avec pseudo et avatar
+
+Refus des pseudos déjà utilisés
+
+🏠 Page d’accueil
+Affichage des utilisateurs connectés en temps réel
+
+Liste des parties disponibles
+
+🎮 Gestion des rooms
+Création de parties publiques ou privées
+
+Rejoindre une partie avec un code
+
+Limite de joueurs par room
+
+🎯 Déroulement du jeu
+Choix du mode (réservé au host)
+
+Phase de rédaction d’histoire
+
+Phase de devinette de l’auteur (mode amis)
+
+Vote : VRAI ou BLUFF
+
+Calcul des scores
+
+Classement final
+
+⏱️ Temps réel
+Mise à jour automatique des joueurs et des états
+
+Timers pour chaque phase afin d’éviter les blocages
+
+🛡️ Sécurité et gestion des erreurs
+Le site empêche plusieurs actions invalides :
+
+❌ Utilisation d’un pseudo déjà pris
+
+❌ Rejoindre une room inexistante
+
+❌ Rejoindre une room pleine
+
+❌ Lancer une partie sans assez de joueurs
+
+❌ Jouer sans être connecté
+
+❌ Voter plusieurs fois
+
+❌ Voter pour soi-même
+
+❌ Accéder directement aux pages protégées
+
+🔄 Cas particuliers gérés
+Si le host quitte, la partie est supprimée
+
+Si une room disparaît, l’utilisateur est redirigé vers l’accueil
+
+📂 Structure du projet
+/whorelate
+│
+├── index.php              # Page de connexion
+├── home.php               # Page d’accueil
+├── game.php               # Page principale du jeu
+├── start_screen.php       # Lancement de partie
+├── server.php             # Gestion création/join room
+├── submit_answer.php      # Envoi des réponses
+├── submit_vote.php        # Gestion des votes
+├── choose_mode.php        # Sélection du mode
+├── logout.php             # Déconnexion
+│
+├── data.json              # Base de données (JSON)
+│
+├── style.css              # Style global
+├── home.css               # Style page home
+├── game.css               # Style jeu
+├── index.css              # Style login
+│
+└── assets/                # Images / ressources
+🚀 Lancer le projet
+✅ Prérequis
+PHP installé
+
+▶️ Étapes
+Ouvrir un terminal dans le dossier du projet
+
+Lancer le serveur PHP avec la commande :
+
+php -S localhost:8000
+Ouvrir un navigateur et accéder à :
+
+http://localhost:8000/start_screen.php
+Pour simuler plusieurs joueurs, ouvrir plusieurs navigateurs différents ou utiliser des fenêtres en navigation privée (incognito)
+
+📈 Améliorations possibles
+Améliorer la gestion de la déconnexion des joueurs : actuellement, si un joueur ferme son navigateur, il reste considéré comme connecté. Une solution serait de détecter l’inactivité ou la fermeture pour le retirer automatiquement.
+
+Permettre l’accès au jeu via un lien public (nom de domaine) plutôt que via une adresse locale ou un VPN, afin de faciliter l’accès pour tous les joueurs.
+
+Ajouter un système de comptes persistants avec inscription et connexion sécurisée.
+
+🎯 Conclusion
+Ce projet met en œuvre :
+
+une application web dynamique
+
+un système multijoueur synchronisé
+
+une gestion complète des états du jeu
+
+une sécurisation des interactions utilisateur
+
+📄
